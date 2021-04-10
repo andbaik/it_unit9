@@ -49,7 +49,6 @@ section .btn-block{
     outline: none;
     
 }
-
 .btn:hover {
     border-color: rgb(151, 24, 24);
     background-color: #8C636B;
