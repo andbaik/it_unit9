@@ -19,27 +19,19 @@
         <button id="show_btn" class="show-task btn">Отобразить</button>
         </div>
         <div id="result"> Элемент был добавлен</div>
-        <div class="block"></div>
     </section>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script>
-        let count = 0;
+        
         $("#add_btn").on('click',function(){
             let task = $("input").val()
-            count++;
+
             $("#result").css("display", "block");
             setTimeout( function(){$("#result").hide()}, 2000);
-            $('<div>').attr({'class':'add_item'}).css({'display':'none'}).insertAfter ("#result");
-                $(".add_item").html("<h1>"+'Задание #'+count+' ' +task+"</h1>").appendTo($('.block'));   
+            $('<div>').attr({'class':'add_item'}).insertAfter ("#result");
+                $(".add_item").html("<h2>"'Задание #'+ +task+"</h2>");
 
-        });
-        $("#show_btn").on('click',function(){
-            $(".add_item").css("display", "block");
         });
     </script>
-<!--$('body').append('<p>This is the text in new element.<p>');
-    $(".add_item").html("<h1>"+'Задание #'+count+' ' +task+"</h1>");
--->
-
 </body>
 </html>

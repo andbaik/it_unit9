@@ -30,7 +30,7 @@
             $("#result").css("display", "block");
             setTimeout( function(){$("#result").hide()}, 2000);
             $('<div>').attr({'class':'add_item'}).css({'display':'none'}).insertAfter ("#result");
-                $(".add_item").html("<h1>"+'Задание #'+count+' ' +task+"</h1>").appendTo($('.block'));   
+                $(".add_item").html("<h1>"+'Задание #'+count+' ' +task+"</h1>").appendTo('section');   
 
         });
         $("#show_btn").on('click',function(){

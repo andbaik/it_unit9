@@ -77,4 +77,8 @@ section .btn-block{
     color: #5C5B5C;
 }
 
-
+.add_item {
+    width: 100px;
+    height: 100px;
+    background-color: ;
+}
