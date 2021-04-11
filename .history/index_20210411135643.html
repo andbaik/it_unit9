@@ -36,17 +36,18 @@
              $('<div>').attr({'class':'add_item'}).css({'display':'none'}).insertAfter ("#result");
              $(".add_item").html("<h1>"+'Задание #'+count+' ' +arr+"</h1>").appendTo($('.block'));   
              */
-            console.log(arr.length);
+            console.log(arr);
         });
         $("#show_btn").on('click', function () {
-                for (i = 0; i < arr.length; i++) {
+            /*$(".add_item").css("display", "block");*/
+            for (i = 0; i < arr.length; i++) {
                 $('<div>').attr({
                     'class': 'add_item'
                 }).insertAfter("#result");
-                $(".add_item").html("<h1>" + 'Задание #' + i + ' ' + arr[i] + "</h1>" + "<br>").appendTo($('.block'));
-                
+                $(".add_item").html("<h1>" + 'Задание #' + i + ' ' + arr[i] + "</h1>").appendTo($('.block'));
+                console.log('i='+i + '    ' + arr[i]);
             }
-            
+            console.log(arr);
         });
     </script>
     <!--$('body').append('<p>This is the text in new element.<p>');

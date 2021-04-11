@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Список дел</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+    <head>
+        <h1>Список дел</h1>
+    </head>
+    <section>
+        <input type="text" name="task" id="task" value="Задание">
+        <div class="btn-block">
+        <button id="add_btn" class="add-task btn">Добавить</button>
+        <button id="show_btn" class="show-task btn">Отобразить</button>
+        </div>
+        <div id="result"> Элемент был добавлен</div>
+        <div class="block"></div>
+    </section>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        let count = 0;
+        $("#add_btn").on('click',function(){
+            let task [] = $("input").val()
+            count++;
+            $("#result").css("display", "block");
+            setTimeout( function(){$("#result").hide()}, 2000);
+            $('<div>').attr({'class':'add_item'}).css({'display':'none'}).insertAfter ("#result");
+                $(".add_item").html("<h1>"+'Задание #'+count+' ' +task+"</h1>").appendTo($('.block'));   
+
+        });
+        $("#show_btn").on('click',function(){
+            /*$(".add_item").css("display", "block");
+        });
+    </script>
+<!--$('body').append('<p>This is the text in new element.<p>');
+    $(".add_item").html("<h1>"+'Задание #'+count+' ' +task+"</h1>");
+-->
+
+</body>
+</html>
